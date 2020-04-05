@@ -4,7 +4,11 @@
 #
 from pprint import pprint
 import re
+import math
 
+def round_up(n, decimals):
+    multiplier = 10 ** decimals
+    return math.ceil(n * multiplier) / multiplier
 
 vc_units = 0
 int(vc_units)
@@ -26,5 +30,11 @@ print ('Total video bandwidth required:',vc_bandwidth,'Mbps')
 
 bw_total = int(vc_bandwidth) / .15  #Video BW considered 15% of total BW
 
+bw_total_rounded = round(bw_total,-1)
+
 print ('')
-print ('Total site bandwidth required:',bw_total,'Mbps')
+print (bw_total_rounded)
+
+
+print ('')
+print ('Total site bandwidth required:',bw_total_rounded,'Mbps')
