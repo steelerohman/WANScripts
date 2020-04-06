@@ -20,21 +20,33 @@ int(bw_total)
 vc_bandwidth = 0
 int(vc_bandwidth)
 
-vc_units = input('Enter the number of VC units:')  # Input from CLI
+vc_units = input('Enter the number of VC units: ')  # Input from CLI
 
 vc_bandwidth = int(vc_units)*2400 # Multiply by 2400Kbps
 
 vc_bandwidth = vc_bandwidth/1000  # Convert from Kbps --> Mbps
 
+print ('')
+print ('')
+print ('')
+print ('-------------------Bandwidth Results------------------------')
+print ('------------------------------------------------------------')
+print ('')
+print ('')
+print ('')
+
+
 print ('Total video bandwidth required:',vc_bandwidth,'Mbps')
 
 bw_total = int(vc_bandwidth) / .15  #Video BW considered 15% of total BW
 
+bw_total = round(bw_total,1)
 bw_total_rounded = round(bw_total,-1)
 
 print ('')
-print (bw_total_rounded)
+print ('Total site bandwidth required(not rounded):',bw_total,'Mbps')
+#print (bw_total)
 
 
 print ('')
-print ('Total site bandwidth required:',bw_total_rounded,'Mbps')
+print ('Total site bandwidth required(rounded):',bw_total_rounded,'Mbps')
