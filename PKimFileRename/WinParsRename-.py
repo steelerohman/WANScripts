@@ -1,5 +1,6 @@
-#
-#
+# Use this script within a working directory. It will parse
+# all of the files and add a hyphen '-' after upper or lower
+# case series of letters
 #
 import shutil, os, re
 
